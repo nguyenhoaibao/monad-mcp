@@ -1,0 +1,11 @@
+services:
+  server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: ["./server"]
+    ports:
+      - "8000:8000"
+    restart: always
+    stop_signal: SIGINT
